@@ -15,6 +15,7 @@ import "./styles/codemirror"
 import Luminave from './plugins/luminave'
 import StyledHeader from './components/styledHeader'
 import StyledFooter from './components/styledFooter'
+import LuminaveButton from './components/luminaveButton'
 
 const mySlides = [
   'cover',
@@ -25,21 +26,7 @@ const mySlides = [
   'thank-you'
 ]
 
-
-/*
- Integrate Luminave into Dekk
- backlight for your talk
- set scenes to match your slide mood
-*/
-
 const {present, live} = search.parse(window.location.href)
-
-const Button = styled.button`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1337;
-`
 
 const baseStyles = css`
   --font-family: "Montserrat", sans-serif;
@@ -85,7 +72,7 @@ class App extends Component {
         <Plugins mode={["present"]}>
           <Controller trigger="keydown" handleFrame={this.setFrame} />
           <Luminave publish showFrame={this.state.showFrame} handleFrame={this.setFrame} />
-          <Button onClick={this.setFrame}>Luminave</Button>
+          <LuminaveButton onClick={this.setFrame}>Luminave</LuminaveButton>
         </Plugins>
 
         <Plugins mode={["live"]}>
