@@ -3,7 +3,7 @@ import React from 'react'
 import {Quote as DekkQuote} from '@dekk/text'
 
 const StyledQuote = styled.div`
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     --quote-border-color: #ddd;
 `
 
