@@ -11,24 +11,23 @@ import {Plugins} from '@dekk/deck'
 // import * as dekkAnimation from '@dekk/animation'
 import {ViewportSize, Code2} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
+import {Half} from '../masters'
 
-
-const {Slide, A} = Main
+const {Slide, A, B} = Half
 
 import {select} from '../utils'
 
 const ranges = [
   [ // open session
-    select([9, 0], [14, 0])
+    select([4, 0], [9, 0])
   ],
   [ // Select #1 configuration
-    select([15, 0], [21, 0])
+    select([10, 0], [16, 0])
   ],
-  [ select([22, 0], [24, 0])], // access to interface #2
-  [ select([25, 0], [33, 0])], // We are ready to receive data on Endpoint 1 of Interface #2
-  [ select([34, 0], [36, 0])], // Receive 512 bytes on Endpoint 5
-  [ select([37, 0], [41, 0])], // TextDecoder
-  [ select([42, 0], [45, 0])], // catch error
+  [ select([17, 0], [19, 0])], // access to interface #2
+  [ select([20, 0], [28, 0])], // We are ready to receive data on Endpoint 1 of Interface #2
+  [ select([29, 0], [31, 0])], // Receive 512 bytes on Endpoint 5
+  [ select([32, 0], [35, 0])] // TextDecoder
 ]
 
 const codeOptions = {
@@ -37,15 +36,10 @@ const codeOptions = {
   theme: 'neo'
 }
 
-const code = `// Only request the port for specific devices
-const filters = [
-  // Arduino LLC (10755), Leonardo ETH (32832)
-  { vendorId: 0x2a03, productId: 0x8040 }
-]
+const code = `// Request access to the Arduino Leonardo ETH
+navigator.usb.requestDevice({ filters: [{vendorId: 0x2a03, productId: 0x8040}] })
 
-// Request access to the USB device
-navigator.usb.requestDevice({ filters })
-  // Open session to selected USB device
+  // Open session to selected Arduino
   .then(selectedDevice => {
     device = selectedDevice
     return device.open()
@@ -61,7 +55,7 @@ navigator.usb.requestDevice({ filters })
   // Get exclusive access to Interface #2
   .then(() => device.claimInterface(2))
 
-  // Tell the USB device that we are ready to send data on Interface #2
+  // Tell the Arduino that we are ready to send data on Interface #2
   .then(() => device.controlTransferOut({
     'requestType': 'class',
     'recipient': 'interface',
@@ -74,12 +68,7 @@ navigator.usb.requestDevice({ filters })
   .then(() => device.transferIn(5, 512))
 
   .then(({ data }) => {
-    let decoder = new TextDecoder()
-    console.log('Received: ' + decoder.decode(data))
-  })
-
-  .catch(error => {
-    console.log(error)
+    console.log('Received: ' + new TextDecoder().decode(data))
   })`
 
 const notes = (
@@ -101,12 +90,14 @@ export default (
     {notes}
 
     <A>
-      <Subtitle>WebUsbConnection.js</Subtitle>
+      <Subtitle>Connect to Arduino</Subtitle>
+    </A>
 
+    <B>
       <Code2 ranges={ranges} options={codeOptions} order={-1}>
           {code}
       </Code2>
-    </A>
+    </B>
 
   </Slide>
 )

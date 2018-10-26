@@ -11,15 +11,15 @@ import {Plugins} from '@dekk/deck'
 // import * as dekkAnimation from '@dekk/animation'
 import {ViewportSize, Code2} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
+import {Half} from '../masters'
 
-
-const {Slide, A} = Main
+const {Slide, A, B} = Half
 
 import {select} from '../utils'
 
 const ranges = [
-  [ select([1, 0], [6, 0]) ], // filters
-  [ select([7, 0], [9, 0]) ] // request access
+  [ select([1, 0], [3, 0]) ], // request access
+  [ select([2, 30], [2, 78]) ], // filters
 ]
 
 const codeOptions = {
@@ -28,15 +28,10 @@ const codeOptions = {
   theme: 'neo'
 }
 
-const code = `// Only request the port for specific devices
-const filters = [
-  // Arduino LLC (10755), Leonardo ETH (32832)
-  { vendorId: 0x2a03, productId: 0x8040 }
-]
+const code = `// Request access to the Arduino Leonardo ETH
+navigator.usb.requestDevice({ filters: [{vendorId: 0x2a03, productId: 0x8040}] })
 
-// Request access to the USB device 
-navigator.usb.requestDevice({ filters })
-  // Open session to selected USB device
+  // Open session to selected Arduino
   .then(selectedDevice => {
     device = selectedDevice
     return device.open()
@@ -52,7 +47,7 @@ navigator.usb.requestDevice({ filters })
   // Get exclusive access to Interface #2
   .then(() => device.claimInterface(2))
 
-  // Tell the USB device that we are ready to send data on Interface #2
+  // Tell the Arduino that we are ready to send data on Interface #2
   .then(() => device.controlTransferOut({
     'requestType': 'class',
     'recipient': 'interface',
@@ -65,36 +60,32 @@ navigator.usb.requestDevice({ filters })
   .then(() => device.transferIn(5, 512))
 
   .then(({ data }) => {
-    let decoder = new TextDecoder()
-    console.log('Received: ' + decoder.decode(data))
-  })
-
-  .catch(error => {
-    console.log(error)
+    console.log('Received: ' + new TextDecoder().decode(data))
   })`
 
 const notes = (
   <Notes>
     <h3>Enable WebUSB</h3>
-    <p>enable() function has to be triggered by the user</p>
-    <p>In order to be able to interact with the USB device</p>
-    <p>Set filters to only get the elements that we want and not every element that is attachted to the computer</p>
-    <p>Request access</p>
+    <p>The User has to trigger requestDevice by an explicit user gesture</p>
+    <p>And we set a filter to only interact with the Arduino</p>
+    <p>When this gets executed a pop-up opens</p>
   </Notes>
 )
 
 export default (
-  <Slide key={uuid()} animationIn={flip.x} animationOut={fade.in}>
+  <Slide key={uuid()} animationOut={fade.in}>
     <Plugins.Data luminave={['']}></Plugins.Data>
     {notes}
 
     <A>
-      <Subtitle>WebUsbConnection.js</Subtitle>
+      <Subtitle>Request Access to Arduino</Subtitle>
+    </A>
 
+    <B>
       <Code2 ranges={ranges} options={codeOptions}>
           {code}
       </Code2>
-    </A>
+    </B>
 
   </Slide>
 )

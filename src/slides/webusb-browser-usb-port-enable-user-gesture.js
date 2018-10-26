@@ -18,8 +18,7 @@ const {Slide, A} = Main
 const notes = (
   <Notes>
     <h3>User Gesture: Select USB device</h3>
-    <p>When we execute the enable() function, a popup opens in the browser asking you to select the USB device</p>
-    <p>I have an Arduino and select it</p>
+    <p>A popup opens in the browser asking us to select the Arduino</p>
   </Notes>
 )
 

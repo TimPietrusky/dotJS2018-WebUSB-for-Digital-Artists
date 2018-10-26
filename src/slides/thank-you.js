@@ -13,6 +13,7 @@ import {RainbowText} from '../components'
 import {Half} from '../masters'
 import {ImportantLink} from '../components/links'
 import {SmallImageRound} from '../components/images'
+import {css} from 'styled-components'
 
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
@@ -32,7 +33,7 @@ export default (
     {notes}
 
     <A>
-      <Title><Uppercase><RainbowText time={3.5} text="Thank You!"/></Uppercase></Title>
+      <Title><Uppercase><RainbowText style={{filter: css`invert(100%)`}} time={3.5} text="Thank You!"/></Uppercase></Title>
     </A>
 
     <B>

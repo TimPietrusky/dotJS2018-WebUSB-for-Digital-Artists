@@ -7,13 +7,12 @@ import {default as MaskedImage, FitImage} from '@dekk/image'
 import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
-// import * as wimbAnimation from '../animation'
-// import * as dekkAnimation from '@dekk/animation'
 import {ViewportSize, Code2} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
+import {Half} from '../masters'
 
 
-const {Slide, A} = Main
+const {Slide, A, B} = Half
 import {select} from '../utils'
 
 const ranges = [
@@ -29,9 +28,9 @@ const ranges = [
   [ // loop
     select([17, 0], [30, 0])
   ],
-  [ // WebUSB is ready
-    select([19, 0], [21, 0])
-  ],
+  // [ // WebUSB is ready
+  //   select([19, 0], [21, 0])
+  // ],
   [ // Read incoming data
     select([22, 0], [24, 0])
   ],
@@ -91,13 +90,15 @@ export default (
 
     <A>
       <Subtitle>Arduino Sketch</Subtitle>
-      
+    </A>
+
+    <B>
       <Fragment order={0}>
         <Code2 ranges={ranges} options={codeOptions}>
             {code}
         </Code2>
       </Fragment>
-    </A>
+    </B>
 
   </Slide>
 )

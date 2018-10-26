@@ -6,7 +6,7 @@ import 'codemirror/mode/clike/clike'
 
 const Code2 = props => {
   return (
-    <div style={{width: 80 + "vw"}}>
+    <div style={{maxWidth: 70 + "vw", fontSize: 0.75 + "em"}}>
       <Code {...props} />
     </div>
   )

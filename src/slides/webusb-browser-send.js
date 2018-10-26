@@ -10,13 +10,15 @@ import {Plugins} from '@dekk/deck'
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
 import {ViewportSize, Code2} from '../components'
+import {Half} from '../masters'
 
 
-const {Slide, A} = Main
+const {Slide, A, B} = Half
 
 import {select} from '../utils'
 
 const ranges = [
+  [ select([2, 0], [3, 0])], // send data
 ]
 
 const codeOptions = {
@@ -25,14 +27,13 @@ const codeOptions = {
   theme: 'neo'
 }
 
-const code = `// Send data (ArrayBuffer) to the USB device on Endpoint #4
+const code = `// Send data (ArrayBuffer) to the Arduino on Endpoint #4
 device.transferOut(4, data)`
 
 const notes = (
   <Notes>
     <h3>Send data to USB device</h3>
-    <p>Send data to USB device on Endpoint 4</p>
-    <p>data must be an ArrayBuffer, for example an Uint8Array</p>
+    <p>Sending an ArrayBuffer of data to the Arduino is done by calling transferOut on Endpoint 4</p>
   </Notes>
 )
 
@@ -42,12 +43,14 @@ export default (
     {notes}
 
     <A>
-      <Subtitle>Send data via WebUSB</Subtitle>
-      <br /> <br />
+      <Subtitle>Send data to Arduino</Subtitle>
+    </A>
+
+    <B>
       <Code2 ranges={ranges} options={codeOptions} order={-1}>
           {code}
       </Code2>
-    </A>
+    </B>
 
   </Slide>
 )

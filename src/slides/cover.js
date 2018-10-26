@@ -8,18 +8,19 @@ import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
 import {RainbowText} from '../components'
+import {css} from 'styled-components'
 
 const {Slide, A} = Main
 
 const notes = (
   <Notes>
     <h3>WebUSB for Digital Artists</h3>
-    <p></p>
+    <p>When you really want to use WebUSB today, you need to have two things:</p>
   </Notes>
 )
 
 export default (
-  <Slide key={uuid()} background="#fff" mixin="--slide-color: #000;">
+  <Slide key={uuid()}>
     <Plugins.Data luminave={['']}></Plugins.Data>
     {notes}
 
@@ -27,14 +28,20 @@ export default (
       <Title>
         WebUSB for
        </Title>
-       <Title><RainbowText time={30} text="Digital Artists"/></Title>
+       <Title><RainbowText style={{filter: css`invert(0%)`}} time={30} text="Digital Artists"/></Title>
 
        <Subtitle>&nbsp;</Subtitle>
 
       <Subtitle>
       <img src="media/dotjs-logo.png"
           alt="dotJS Logo"
-          style={{ height: 15 + 'vh' }}
+          style={{ 
+            height: 10 + 'vh', 
+            background: css`var(--theme-surface)`, 
+            boxShadow: css`0 0 0 1rem var(--theme-surface)`,
+            filter: css`invert(0%)`,
+            borderRadius: css`0%`
+          }}
       />
       </Subtitle>
     </A>

@@ -96,6 +96,10 @@ const monokai = `
 
 const neo = `
 
+.CodeMirror.cm-s-neo {
+  min-height: 10px;
+}
+
 .cm-s-neo div.CodeMirror-selected {
   background: var(--theme-primary);
   box-shadow: 
