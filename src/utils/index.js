@@ -3,11 +3,11 @@ export const select = (
   [hL = 0, hC = 0]
 ) => ({
   anchor: {
-    line: aL,
+    line: aL - 1,
     ch: aC
   },
   head: {
-    line: hL,
+    line: hL - 1,
     ch: hC
   }
 })

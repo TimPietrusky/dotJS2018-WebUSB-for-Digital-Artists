@@ -20,9 +20,24 @@ import LuminaveButton from './components/luminaveButton'
 const mySlides = [
   'cover',
   'webusb',
+  'webusb-introduction-1',
+  'webusb-lets-hack',
+  'webusb-introduction-2',
+  'webusb-security',
+  'webusb-how-to-use-webusb-then',
+  'webusb-arduino',
+  'webusb-arduino-sketch',
+  'webusb-arduino-added',
+  'webusb-browser-enable',
+  'webusb-browser-usb-port-enable-user-gesture',
+  'webusb-browser-enable-selected-port',
+  'webusb-browser-send',
   'dmx512',
-  'dekk',
-  'luminave-color',
+  'webusb-dmx512-controller',
+  'luminave-red',
+  'luminave-green',
+  'luminave-blue',
+  'luminave-and-modv-video',
   'thank-you'
 ]
 
@@ -31,6 +46,8 @@ const {present, live} = search.parse(window.location.href)
 const baseStyles = css`
   --font-family: "Montserrat", sans-serif;
   --title-font-size: 6em;
+  --theme-primary: #fadf1d;
+  --theme-on-primary: #000;
 `
 
 class App extends Component {

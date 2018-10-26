@@ -10,11 +10,14 @@ import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
 import {RainbowText} from '../components'
+import {Half} from '../masters'
+import {ImportantLink} from '../components/links'
+import {SmallImage} from '../components/images'
 
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
 
-const {Slide, A} = Main
+const {Slide, A, B} = Half
 
 const notes = (
   <Notes>
@@ -31,6 +34,16 @@ export default (
     <A>
       <Title><Uppercase><RainbowText time={3.5} text="Thank You!"/></Uppercase></Title>
     </A>
+
+    <B>
+      <SmallImage src="media/timpietrusky.jpg" alt="Tim Pietrusky" />
+
+      <br />
+
+      <Subtitle>
+        <ImportantLink href="https://twitter.com/TimPietrusky">twitter.com/TimPietrusky</ImportantLink>
+      </Subtitle>
+    </B>
 
 
   </Slide>

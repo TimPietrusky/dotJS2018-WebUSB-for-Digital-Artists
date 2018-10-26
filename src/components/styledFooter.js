@@ -7,12 +7,12 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   align-content: center;
-  padding: 0 1rem;
+  padding: 1rem;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  font-size: 1rem;
+  text-align: right;
 `
 
 export default StyledFooter

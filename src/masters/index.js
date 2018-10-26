@@ -11,8 +11,23 @@ export const Half = createStyledMaster(
     ${layouts.AB.leftRight};
     [data-slot='A'],
     [data-slot='B'] {
-        ${vertical.base};
+        ${vertical.center};
     }
+`;
+
+export const HalfVertical = createStyledMaster(
+  <Master>
+    <Slot name="A" />
+    <Slot name="B" />
+  </Master>
+)`
+  ${layouts.AB.topBottom};
+  [data-slot='A'] {
+    ${vertical.end};
+  }
+  [data-slot='B'] {
+    ${vertical.start};
+  }
 `;
 
 /**

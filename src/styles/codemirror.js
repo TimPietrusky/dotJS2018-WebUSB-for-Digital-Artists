@@ -97,8 +97,11 @@ const monokai = `
 const neo = `
 
 .cm-s-neo div.CodeMirror-selected {
-  background: rgba(125, 0, 0, 0.3);
-  filter: invert(100%);
+  background: var(--theme-primary);
+  box-shadow: 
+    -6px 0 0 0 var(--theme-primary),
+    6px 0 0 0 var(--theme-primary)
+  ;
 }
 .cm-s-neo.CodeMirror {
   background-color: #ffffff;
