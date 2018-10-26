@@ -40,14 +40,14 @@ export default (
       <br /><br />
 
       <Subtitle>
-        <Fragment order={0}>
+        <Fragment order={1}>
           <ImportantLink style={{maxWidth: css`40vw`}} href="https://medium.com/@timpietrusky/how-to-build-a-webusb-dmx512-controller-by-using-an-arduino-e0dd8efb7bf0">How to build a<br />WebUSB DMX512<br />Controller<br />by using an Arduino</ImportantLink>
         </Fragment>
       </Subtitle>
     </A>
 
     <B>
-      <Fragment fit order={1}>
+      <Fragment fit order={2}>
         <FitImage 
           src="media/webusb_dmx512_controller.jpg"
           alt="WebUSB DMX512 Controller"

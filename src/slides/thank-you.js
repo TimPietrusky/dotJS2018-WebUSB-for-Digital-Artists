@@ -28,12 +28,12 @@ const notes = (
 )
 
 export default (
-  <Slide key={uuid()}>
+  <Slide key={uuid()} mixin={css`filter: invert(100%)`}>
     <Plugins.Data luminave={['0position 1', 'color rainbow', 'movement 2']}></Plugins.Data>
     {notes}
 
     <A>
-      <Title><Uppercase><RainbowText style={{filter: css`invert(100%)`}} time={3.5} text="Thank You!"/></Uppercase></Title>
+      <Title><Uppercase><RainbowText style={{filter: css`invert(0%)`}} time={3.5} text="Thank You!"/></Uppercase></Title>
     </A>
 
     <B>
