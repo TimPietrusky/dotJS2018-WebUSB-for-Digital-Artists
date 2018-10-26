@@ -12,7 +12,7 @@ import {Plugins} from '@dekk/deck'
 import {RainbowText} from '../components'
 import {Half} from '../masters'
 import {ImportantLink} from '../components/links'
-import {SmallImage} from '../components/images'
+import {SmallImageRound} from '../components/images'
 
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
@@ -36,7 +36,7 @@ export default (
     </A>
 
     <B>
-      <SmallImage src="media/timpietrusky.jpg" alt="Tim Pietrusky" />
+      <a href="https://twitter.com/TimPietrusky"><SmallImageRound src="media/timpietrusky.jpg" alt="Tim Pietrusky" /></a>
 
       <br />
 

@@ -85,7 +85,7 @@ const notes = (
 )
 
 export default (
-  <Slide key={uuid()}>
+  <Slide key={uuid()} animationOut={fade.in}>
     <Plugins.Data luminave={['']}></Plugins.Data>
     {notes}
 

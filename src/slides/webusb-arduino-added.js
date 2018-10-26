@@ -7,9 +7,8 @@ import {default as MaskedImage, FitImage} from '@dekk/image'
 import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
-// import * as wimbAnimation from '../animation'
-// import * as dekkAnimation from '@dekk/animation'
 import {LargeImage} from '../components'
+import {fade, flip} from '@dekk/animation'
 
 
 const {Slide, A} = Main
@@ -24,7 +23,7 @@ const notes = (
 )
 
 export default (
-  <Slide key={uuid()} background="#f8f8ff">
+  <Slide key={uuid()} background="#f8f8ff" animationIn={fade.in} animationOut={flip.x}>
     <Plugins.Data luminave={['']}></Plugins.Data>
     {notes}
 

@@ -10,6 +10,7 @@ import {Plugins} from '@dekk/deck'
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
 import {RainbowText} from '../components'
+import {ImportantLink}  from '../components/links'
 
 const {Slide, A} = Main
 
@@ -28,7 +29,7 @@ export default (
 
     <A>
       <Title><RainbowText time={30} text="WebUSB"/></Title>
-      <Fragment order={1}><Subtitle><a href="https://wicg.github.io/webusb">wicg.github.io/webusb</a></Subtitle></Fragment>
+      <Fragment order={1}><Subtitle><ImportantLink href="https://wicg.github.io/webusb">wicg.github.io/webusb</ImportantLink></Subtitle></Fragment>
     </A>
 
   </Slide>

@@ -34,3 +34,8 @@ export const LargeImage = styled.img`
 export const SmallImage = styled.img`
   height: 40vh;
 `
+
+export const SmallImageRound = styled(SmallImage)`
+  border-radius: 50%;
+  border: .5em solid var(--theme-primary);
+`
