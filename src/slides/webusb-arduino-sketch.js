@@ -7,10 +7,10 @@ import {default as MaskedImage, FitImage} from '@dekk/image'
 import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
-import {ViewportSize, Code2} from '../components'
+import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
-
+import {css} from 'styled-components'
 
 const {Slide, A, B} = Half
 import {select} from '../utils'
@@ -78,8 +78,11 @@ void loop() {
 const notes = (
   <Notes>
     <p>The code that you load onto an Arduino is called sketch</p>
-    <p>A universe has 512 channels, the Arduino will handle one universe</p>
-    <p>DMX_master is the module to control the DMX shield</p>
+    <p>We load the WebUSB library which transforms the Arduino into a WebUSB compatible device</p>
+    <p>We set the URL which tells the browser the page our device should be used with</p>
+    <p>setup() is called once when the Arduino is started and sets some defaults</p>
+    <p>loop() is called over and over again, the important bits are that we can read data from the browser and can also send data back to the browser</p>
+    <p>When we load this code onto the Arduino and connect the Arduino via USB to the computer...</p>
   </Notes>
 )
 
@@ -89,7 +92,37 @@ export default (
     {notes}
 
     <A>
-      <Subtitle>Arduino Sketch</Subtitle>
+      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="Arduino Sketch"/></Subtitle>
+
+      <Fragment order={1}>
+        <br />
+        <Subtitle>WebUSB library</Subtitle>
+      </Fragment>
+
+      <Fragment order={2}>
+        <br />
+        <Subtitle>Set default URL</Subtitle>
+      </Fragment>
+
+      <Fragment order={3}>
+        <br />
+        <Subtitle>setup()</Subtitle>
+      </Fragment>
+
+      <Fragment order={4}>
+        <br />
+        <Subtitle>loop()</Subtitle>
+      </Fragment>
+
+      <Fragment order={5}>
+        <br />
+        <Subtitle>Receive data from Browser</Subtitle>
+      </Fragment>
+
+      <Fragment order={6}>
+        <br />
+        <Subtitle>Send data to Browser</Subtitle>
+      </Fragment>
     </A>
 
     <B>

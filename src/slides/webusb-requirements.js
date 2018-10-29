@@ -20,9 +20,10 @@ const {Slide, A, B} = Half
 const notes = (
   <Notes>
     <h3>WebUSB</h3>
-    <p>Google Chrome, because it's the only browser supporting WebUSB yet</p>
-    <p>And an Arduino, because it can be used as a custom device that get's recogniced by your computer as a WebUSB device</p>
-    <p>The code needed to transform your Arduino into a WebUSB compatible device can be found in this repo by one of the creators of the WebUSB spec</p>
+    <p>The first thing is Google Chrome, because it's the only browser supporting WebUSB yet</p>
+    <p>The second thing is an Arduino, because it can be used to control literally anything.</p>
+    <p>With the help of this repository it can also be turned into a WebUSB compatible device</p>
+    <p>So let's do that</p>
   </Notes>
 )
 

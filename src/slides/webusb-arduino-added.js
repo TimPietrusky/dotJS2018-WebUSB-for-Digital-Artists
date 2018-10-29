@@ -16,8 +16,8 @@ const {Slide, A} = Main
 const notes = (
   <Notes>
     <h3>WebUSB Arduino added</h3>
-    <p>When you attach the Arduino via USB to the computer</p>
-    <p>Message in the browser that the device was added with the URL we specified in the Arduino Sketch</p>
+    <p>...we get this nice notification which indicates that we should open localhost:1337</p>
+    <p>The URL is the one we specified in the Arduino Sketch</p>
     <p>Not working in Windows as of now</p>
   </Notes>
 )

@@ -15,7 +15,7 @@ const {Slide, A} = Main
 const notes = (
   <Notes>
     <h3>WebUSB for Digital Artists</h3>
-    <p>When you really want to use WebUSB today, you need to have two things:</p>
+    <p>When you want to use WebUSB in your digital art projects today, you need two things:</p>
   </Notes>
 )
 

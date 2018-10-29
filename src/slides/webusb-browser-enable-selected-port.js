@@ -9,9 +9,10 @@ import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
-import {ViewportSize, Code2} from '../components'
+import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
+import {css} from 'styled-components'
 
 const {Slide, A, B} = Half
 
@@ -78,9 +79,8 @@ const notes = (
     <p>Use configuration #1 if no configuration was automatially applied by the Operating System</p>
     <p>Get exclusive access to interface #2</p>
     <p>We are ready to receive data on Interface #2 using a controlTransferOut -> Send control commands to the USB device</p>
-    <p>Receive 512 bytes on Endpoint 5</p>
-    <p>Convert the received bytes data into a String by using a TextDecoder (decodes encodings)</p>
-    <p>Catch all the errors</p>
+    <p>We wait until we receive 512 bytes on Endpoint 5</p>
+    <p>Convert the received bytes data into a String by using a TextDecoder, because what we get are bytes</p>
   </Notes>
 )
 
@@ -90,7 +90,35 @@ export default (
     {notes}
 
     <A>
+      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+
+      <br />
       <Subtitle>Connect to Arduino</Subtitle>
+
+      <Fragment order={1}>
+        <br />
+        <Subtitle>Select configuration</Subtitle>
+      </Fragment>
+
+      <Fragment order={2}>
+        <br />
+        <Subtitle>Exclusive access</Subtitle>
+      </Fragment>
+
+      <Fragment order={3}>
+        <br />
+        <Subtitle>Ready to send data</Subtitle>
+      </Fragment>
+
+      <Fragment order={4}>
+        <br />
+        <Subtitle>Receive data from Arduino</Subtitle>
+      </Fragment>
+
+      <Fragment order={5}>
+        <br />
+        <Subtitle>Convert Bytes into String</Subtitle>
+      </Fragment>
     </A>
 
     <B>

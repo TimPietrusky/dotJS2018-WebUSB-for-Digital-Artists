@@ -7,11 +7,11 @@ import {default as MaskedImage, FitImage} from '@dekk/image'
 import Notes from '@dekk/speaker-notes'
 import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
-// import * as wimbAnimation from '../animation'
-// import * as dekkAnimation from '@dekk/animation'
-import {ViewportSize, Code2} from '../components'
+import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
+import {css} from 'styled-components'
+
 
 const {Slide, A, B} = Half
 
@@ -78,7 +78,17 @@ export default (
     {notes}
 
     <A>
-      <Subtitle>Request Access to Arduino</Subtitle>
+      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+
+      <Fragment order={1}>
+        <br />
+        <Subtitle>Request access</Subtitle>
+      </Fragment>
+
+      <Fragment order={2}>
+        <br />
+        <Subtitle>Set filter</Subtitle>
+      </Fragment>
     </A>
 
     <B>

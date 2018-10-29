@@ -9,8 +9,9 @@ import {Main} from '@dekk/master-slides'
 import {Plugins} from '@dekk/deck'
 // import * as wimbAnimation from '../animation'
 // import * as dekkAnimation from '@dekk/animation'
-import {ViewportSize, Code2} from '../components'
+import {ViewportSize, Code2, RainbowText} from '../components'
 import {Half} from '../masters'
+import {css} from 'styled-components'
 
 
 const {Slide, A, B} = Half
@@ -33,7 +34,7 @@ device.transferOut(4, data)`
 const notes = (
   <Notes>
     <h3>Send data to USB device</h3>
-    <p>Sending an ArrayBuffer of data to the Arduino is done by calling transferOut on Endpoint 4</p>
+    <p>We can also send data (ArrayBuffer) to the Arduino by calling transferOut on Endpoint 4</p>
   </Notes>
 )
 
@@ -43,6 +44,9 @@ export default (
     {notes}
 
     <A>
+      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+
+      <br />
       <Subtitle>Send data to Arduino</Subtitle>
     </A>
 

@@ -37,7 +37,7 @@ const mySlides = [
   // 'luminave-red',
   // 'luminave-green',
   // 'luminave-blue',
-  'luminave-and-modv-video',
+  'livejs-performance',
   'thank-you'
 ]
 

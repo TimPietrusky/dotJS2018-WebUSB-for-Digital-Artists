@@ -46,6 +46,7 @@
     "codemirror": "^5.36.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-player": "^1.6.6",
     "react-yt": "^0.1.2",
     "sockette": "^2.0.0",
     "webmidi": "^2.0.4"

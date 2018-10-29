@@ -19,13 +19,10 @@ const {Slide, A, B} = Half
 const notes = (
   <Notes>
     <h3>WebUSB DMX512 controller</h3>
-    <p>DMX512 is a standard for professional lighting</p>
-    <p>And now that we have the basics we can build our first WebUSB device and what</p>
-    <p>An Arduino can be extended by using shields</p>
-    <p>Which is connected to the Arduino, which you can see in the bottom</p>
-    <p>I have written an detailed guide on what you have to do in order to create your own WebUSB DMX512 controller</p>
-    <p>And also published a module on npm that is doing all the WebUSB code needed to control DMX</p>
-    <p>With that in place we can now control the lights directly from the browser</p>
+    <p>In my digital art projects I love to use DMX512, which is a standard for professional lighting</p>
+    <p>One way of controlling other hardware with the Arduino is by using shields, so I added this DMX512 shield on top of the Arduino</p>
+    <p>I have written a detailed guide on how you can do this too, but as Ii don't have much time left I will just show you the WebUSB DMX512 Controller in action</p>
+    <p>By the end of this guide you will be able to control lights directly from the browser</p>
   </Notes>
 )
 
@@ -35,19 +32,21 @@ export default (
     {notes}
 
     <A>
+      <Fragment order={0}>
       <Title><RainbowText time={30} text="DMX512"/></Title>
+      </Fragment>
 
       <br /><br />
-
-      <Subtitle>
-        <Fragment order={1}>
+      
+      <Fragment order={2}>
+        <Subtitle>
           <ImportantLink style={{maxWidth: css`40vw`}} href="https://medium.com/@timpietrusky/how-to-build-a-webusb-dmx512-controller-by-using-an-arduino-e0dd8efb7bf0">How to build a<br />WebUSB DMX512<br />Controller<br />by using an Arduino</ImportantLink>
-        </Fragment>
-      </Subtitle>
+        </Subtitle>
+      </Fragment>
     </A>
 
     <B>
-      <Fragment fit order={2}>
+      <Fragment fit order={1}>
         <FitImage 
           src="media/webusb_dmx512_controller.jpg"
           alt="WebUSB DMX512 Controller"
