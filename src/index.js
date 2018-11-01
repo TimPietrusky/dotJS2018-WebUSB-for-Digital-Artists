@@ -48,6 +48,7 @@ const baseStyles = css`
   --font-family: "Montserrat", sans-serif;
   --title-font-size: 6em;
   --theme-primary: #fadf1d;
+  --theme-primary-dark: #c7b218;
   --theme-on-primary: #000;
   --theme-background: #000;
   --theme-surface: #fff;

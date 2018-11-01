@@ -11,6 +11,7 @@ import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
 import {css} from 'styled-components'
+import {StyledList} from '../components/list'
 
 
 const {Slide, A, B} = Half
@@ -25,7 +26,7 @@ const ranges = [
 const codeOptions = {
   lineNumbers: true,
   mode: 'javascript',
-  theme: 'neo'
+  theme: 'dracula'
 }
 
 const code = `// Request access to the Arduino Leonardo ETH
@@ -80,15 +81,15 @@ export default (
     <A>
       <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
 
-      <Fragment order={1}>
-        <br />
-        <Subtitle>Request access</Subtitle>
-      </Fragment>
+      <StyledList>
+        <Fragment order={1}>
+          <li>Request access</li>
+        </Fragment>
 
-      <Fragment order={2}>
-        <br />
-        <Subtitle>Set filter</Subtitle>
-      </Fragment>
+        <Fragment order={2}>
+          <li>Set filter</li>
+        </Fragment>
+      </StyledList>
     </A>
 
     <B>

@@ -13,6 +13,7 @@ import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
 import {css} from 'styled-components'
+import {StyledList} from '../components/list'
 
 const {Slide, A, B} = Half
 
@@ -34,7 +35,7 @@ const ranges = [
 const codeOptions = {
   lineNumbers: true,
   mode: 'javascript',
-  theme: 'neo'
+  theme: 'dracula'
 }
 
 const code = `// Request access to the Arduino Leonardo ETH
@@ -92,33 +93,29 @@ export default (
     <A>
       <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
 
-      <br />
-      <Subtitle>Connect to Arduino</Subtitle>
+      <StyledList>
+        <li>Connect to Arduino</li>
 
-      <Fragment order={1}>
-        <br />
-        <Subtitle>Select configuration</Subtitle>
-      </Fragment>
+        <Fragment order={1}>
+          <li>Select configuration</li>
+        </Fragment>
 
-      <Fragment order={2}>
-        <br />
-        <Subtitle>Exclusive access</Subtitle>
-      </Fragment>
+        <Fragment order={2}>
+          <li>Exclusive access</li>
+        </Fragment>
 
-      <Fragment order={3}>
-        <br />
-        <Subtitle>Ready to send data</Subtitle>
-      </Fragment>
+        <Fragment order={3}>
+          <li>Ready to send data</li>
+        </Fragment>
 
-      <Fragment order={4}>
-        <br />
-        <Subtitle>Receive data from Arduino</Subtitle>
-      </Fragment>
+        <Fragment order={4}>
+          <li>Receive data from Arduino</li>
+        </Fragment>
 
-      <Fragment order={5}>
-        <br />
-        <Subtitle>Convert Bytes into String</Subtitle>
-      </Fragment>
+        <Fragment order={5}>
+          <li>Convert Bytes into String</li>
+        </Fragment>
+      </StyledList>
     </A>
 
     <B>

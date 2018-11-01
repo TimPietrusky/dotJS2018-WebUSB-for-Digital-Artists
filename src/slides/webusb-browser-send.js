@@ -12,6 +12,7 @@ import {Plugins} from '@dekk/deck'
 import {ViewportSize, Code2, RainbowText} from '../components'
 import {Half} from '../masters'
 import {css} from 'styled-components'
+import {StyledList} from '../components/list'
 
 
 const {Slide, A, B} = Half
@@ -25,7 +26,7 @@ const ranges = [
 const codeOptions = {
   lineNumbers: true,
   mode: 'javascript',
-  theme: 'neo'
+  theme: 'dracula'
 }
 
 const code = `// Send data (ArrayBuffer) to the Arduino on Endpoint #4
@@ -46,8 +47,9 @@ export default (
     <A>
       <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
 
-      <br />
-      <Subtitle>Send data to Arduino</Subtitle>
+      <StyledList>
+        <li>Send data to Arduino</li>
+      </StyledList>
     </A>
 
     <B>

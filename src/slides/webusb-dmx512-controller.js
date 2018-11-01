@@ -21,8 +21,7 @@ const notes = (
     <h3>WebUSB DMX512 controller</h3>
     <p>In my digital art projects I love to use DMX512, which is a standard for professional lighting</p>
     <p>One way of controlling other hardware with the Arduino is by using shields, so I added this DMX512 shield on top of the Arduino</p>
-    <p>I have written a detailed guide on how you can do this too, but as Ii don't have much time left I will just show you the WebUSB DMX512 Controller in action</p>
-    <p>By the end of this guide you will be able to control lights directly from the browser</p>
+    <p>I have written a detailed guide on how you can do this too, but as I don't have much time left I will just show you the WebUSB DMX512 Controller in action</p>
   </Notes>
 )
 

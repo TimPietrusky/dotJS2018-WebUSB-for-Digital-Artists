@@ -11,6 +11,7 @@ import {ViewportSize, Code2, RainbowText} from '../components'
 import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import {Half} from '../masters'
 import {css} from 'styled-components'
+import {StyledList} from '../components/list'
 
 const {Slide, A, B} = Half
 import {select} from '../utils'
@@ -42,7 +43,7 @@ const ranges = [
 const codeOptions = {
   lineNumbers: true,
   mode: 'clike',
-  theme: 'neo'
+  theme: 'dracula'
 }
 
 const code = `#include <WebUSB.h>
@@ -94,35 +95,31 @@ export default (
     <A>
       <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="Arduino Sketch"/></Subtitle>
 
-      <Fragment order={1}>
-        <br />
-        <Subtitle>WebUSB library</Subtitle>
-      </Fragment>
+      <StyledList>
+        <Fragment order={1}>
+          <li>WebUSB library</li>
+        </Fragment>
 
-      <Fragment order={2}>
-        <br />
-        <Subtitle>Set default URL</Subtitle>
-      </Fragment>
+        <Fragment order={2}>
+          <li>Set default URL</li>
+        </Fragment>
 
-      <Fragment order={3}>
-        <br />
-        <Subtitle>setup()</Subtitle>
-      </Fragment>
+        <Fragment order={3}>
+          <li>setup()</li>
+        </Fragment>
 
-      <Fragment order={4}>
-        <br />
-        <Subtitle>loop()</Subtitle>
-      </Fragment>
+        <Fragment order={4}>
+          <li>loop()</li>
+        </Fragment>
 
-      <Fragment order={5}>
-        <br />
-        <Subtitle>Receive data from Browser</Subtitle>
-      </Fragment>
+        <Fragment order={5}>
+          <li>Receive data from Browser</li>
+        </Fragment>
 
-      <Fragment order={6}>
-        <br />
-        <Subtitle>Send data to Browser</Subtitle>
-      </Fragment>
+        <Fragment order={6}>
+          <li>Send data to Browser</li>
+        </Fragment>
+      </StyledList>
     </A>
 
     <B>
