@@ -20,7 +20,7 @@ const {Slide, A, B} = Half
 import {select} from '../utils'
 
 const ranges = [
-  [ select([2, 0], [3, 0])], // send data
+  [ select([1, 0], [3, 0])], // send data
 ]
 
 const codeOptions = {
@@ -48,14 +48,16 @@ export default (
       <Subtitle><RainbowText style={{filter: css`invert(0%)`}} time={30} text="JavaScript"/></Subtitle>
 
       <StyledList>
-        <li>Send data to Arduino</li>
+        <Fragment order={1}>
+          <li>Send data to Arduino</li>
+        </Fragment>
       </StyledList>
     </A>
 
     <B>
       <br />
       <br />
-      <Code2 ranges={ranges} options={codeOptions} order={-1}>
+      <Code2 ranges={ranges} options={codeOptions}>
           {code}
       </Code2>
     </B>
