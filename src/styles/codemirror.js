@@ -231,7 +231,7 @@ const neo = `
 const dracula = `
 
 .CodeMirror.cm-s-dracula {
-  min-height: 10px;
+  min-height: 10vh;
 }
 
 .cm-s-dracula .CodeMirror-selected { 

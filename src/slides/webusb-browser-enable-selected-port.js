@@ -91,7 +91,7 @@ export default (
     {notes}
 
     <A>
-      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+      <Subtitle><RainbowText style={{filter: css`invert(0%)`}} time={30} text="JavaScript"/></Subtitle>
 
       <StyledList>
         <li>Connect to Arduino</li>

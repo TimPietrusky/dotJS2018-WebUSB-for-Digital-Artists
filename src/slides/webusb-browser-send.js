@@ -45,7 +45,7 @@ export default (
     {notes}
 
     <A>
-      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+      <Subtitle><RainbowText style={{filter: css`invert(0%)`}} time={30} text="JavaScript"/></Subtitle>
 
       <StyledList>
         <li>Send data to Arduino</li>
@@ -53,6 +53,8 @@ export default (
     </A>
 
     <B>
+      <br />
+      <br />
       <Code2 ranges={ranges} options={codeOptions} order={-1}>
           {code}
       </Code2>

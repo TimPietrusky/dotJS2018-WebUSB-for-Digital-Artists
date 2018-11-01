@@ -31,7 +31,7 @@ export default (
           return <SuperVideo 
                 //src="media/IMG_0659.m4v#t=93,170"
                 // src="media/JSConfEU_18_Replay_Opener.mp4#t=623"
-                src="media/JSConfEU_LiveJS_Performance_2018.mp4#t=50"
+                src="media/JSConfEU_LiveJS_Performance_2018.mp4#t=2"
                 isPlaying={index===0}
           />
         }}

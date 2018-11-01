@@ -6,7 +6,8 @@ export const StyledList = styled.ul`
   text-align: right;
   font-size: 2em;
   padding-right: .25em;
-  margin: .5em 0 0 0;
+  margin: .5em 1em 0 0;
+  width: 100%;
 
   > span {
     display: block !important;
@@ -19,7 +20,7 @@ export const StyledList = styled.ul`
       position: relative;
       text-align: right;
       display: inline-block;
-      margin: 0 0 .35em 0;
+      margin: 0 0 .35em auto;
       padding-bottom: .1em;
       border-bottom: 1px solid var(--theme-primary-dark);
 

@@ -79,15 +79,15 @@ export default (
     {notes}
 
     <A>
-      <Subtitle><RainbowText style={{filter: css`invert(100%)`}} time={30} text="JavaScript"/></Subtitle>
+      <Subtitle><RainbowText style={{filter: css`invert(0%)`}} time={30} text="JavaScript"/></Subtitle>
 
       <StyledList>
         <Fragment order={1}>
-          <li>Request access</li>
+          <li>Request access to Arduino</li>
         </Fragment>
 
         <Fragment order={2}>
-          <li>Set filter</li>
+          <li>Set filter for Arduino Leonardo</li>
         </Fragment>
       </StyledList>
     </A>
