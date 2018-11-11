@@ -2,15 +2,10 @@ import React, {cloneElement, Component} from 'react'
 import {render} from 'react-dom'
 import styled, {css, keyframes} from 'styled-components'
 import Deck, {Elements, Plugins} from '@dekk/dekk'
-import Slide from '@dekk/slide'
-import Paging from '@dekk/paging'
 import Controller from './plugins/controller'
 import LocalStorage from '@dekk/local-storage'
-import Listener from '@dekk/listener'
 import SpeakerDeck from '@dekk/speaker-deck'
 import Url, {search} from '@dekk/url'
-import uuid from 'uuid/v4'
-import {fadeSlide, fade, flip, cube} from '@dekk/animation'
 import "./styles/codemirror"
 import Luminave from './plugins/luminave'
 import StyledHeader from './components/styledHeader'
@@ -102,6 +97,11 @@ class App extends Component {
           <LocalStorage subscribe />
           <Luminave subscribe handleFrame={this.handleFrame} slides={this.slides} />
         </Plugins>
+
+        <Plugins mode={["default"]}>
+          <Controller trigger="keydown" handleFrame={this.setFrame} />
+        </Plugins>
+
         {this.slides}
       </Deck>
     )
