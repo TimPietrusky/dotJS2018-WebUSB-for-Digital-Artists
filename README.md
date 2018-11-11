@@ -1,4 +1,4 @@
-# WebUSB for Digital Artists @ dotJS 2018
+![WebUSB for Digital Artits](docs/media/webusb_for_digital_artits_cover.jpg)
 
 This was the lighting talk "WebUSB for Digital Artists" for [dotJS 2018](https://2018.dotjs.io) in Paris. 
 
@@ -15,4 +15,4 @@ _I'm using [Dekk](https://github.com/sinnerschrader/dekk) for my slides, that's 
 
 ## Development
 
-See the [contributing guideline](.github/CONTRIBUTING.md). 
+See the [contributing guideline](.github/CONTRIBUTING.md#development). 
