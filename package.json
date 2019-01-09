@@ -1,7 +1,7 @@
 {
-  "name": "dotJS2018-WebUSB-for-Digital-Artists",
+  "name": "WebUSB-for-Digital-Artists",
   "version": "1.0.0",
-  "description": "Lighting talk for dotJS 2018 about how Digital Artists can use WebUSB for their ideas",
+  "description": "Talk about how Digital Artists can use WebUSB for their ideas",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TimPietrusky/dotJS2018-WebUSB-for-Digital-Artists.git"
+    "url": "git+https://github.com/TimPietrusky/WebUSB-for-Digital-Artists.git"
   },
   "keywords": [
     "dotJJ",
@@ -22,9 +22,9 @@
   "author": "Tim Pietrusky",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TimPietrusky/dotJS2018-WebUSB-for-Digital-Artists/issues"
+    "url": "https://github.com/TimPietrusky/WebUSB-for-Digital-Artists/issues"
   },
-  "homepage": "https://github.com/TimPietrusky/dotJS2018-WebUSB-for-Digital-Artists#readme",
+  "homepage": "https://github.com/TimPietrusky/WebUSB-for-Digital-Artists#readme",
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "@dekk/code": "^2.0.0-2",

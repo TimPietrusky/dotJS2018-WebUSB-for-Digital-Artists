@@ -29,21 +29,6 @@ export default (
         WebUSB for
        </Title>
        <Title><RainbowText style={{filter: css`invert(0%)`}} time={30} text="Digital Artists"/></Title>
-
-       <Subtitle>&nbsp;</Subtitle>
-
-      <Subtitle>
-      <img src="media/dotjs-logo.png"
-          alt="dotJS Logo"
-          style={{ 
-            height: 10 + 'vh', 
-            background: css`var(--theme-surface)`, 
-            boxShadow: css`0 0 0 1rem var(--theme-surface)`,
-            filter: css`invert(0%)`,
-            borderRadius: css`0%`
-          }}
-      />
-      </Subtitle>
     </A>
 
   </Slide>
