@@ -1,7 +1,9 @@
 ![WebUSB for Digital Artits](docs/media/webusb_for_digital_artits_cover.jpg)
 
-* [Slides](https://timpietrusky.github.io/WebUSB-for-Digital-Artists)
-* [Speaker notes](https://timpietrusky.github.io/WebUSB-for-Digital-Artists?present=true)
+This was the lighting talk "WebUSB for Digital Artists" for [dotJS 2018](https://2018.dotjs.io) in Paris. 
+
+* [Slides](https://timpietrusky.github.io/dotJS2018-WebUSB-for-Digital-Artists)
+* [Speaker notes](https://timpietrusky.github.io/dotJS2018-WebUSB-for-Digital-Artists?present=true)
 
 _I'm using [Dekk](https://github.com/sinnerschrader/dekk) for my slides, that's why certain functionality (such as mobile optimization and touch-events to change the slides) are not here yet. I'm sorry for that, but Dekk is the most advanced slides-framework I know and I need to have custom slides as much as possible!_
 
